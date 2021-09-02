@@ -158,7 +158,7 @@ def principal():
             running = False
         screen.fill((0, 0, 0))
         archivo = './pygame/dino.txt'
-        #dibujar_bordes(screen, leer_puntos(archivo))
+        dibujar_bordes(screen, leer_puntos(archivo))
         #escanear_linea(screen, leer_puntos(archivo), 104)
         #escanear_linea(screen, leer_puntos(archivo), 354)
         #escanear_linea(screen, leer_puntos(archivo), 355)
