@@ -1,33 +1,6 @@
 # https://pharos.sh/breve-introduccion-a-opengl-en-python-con-pyopengl/
-from OpenGL.GL import (
-    GL_TRIANGLES,
-    GL_QUADS,
-    GL_PROJECTION,
-    GL_MODELVIEW,
-    GL_COLOR_BUFFER_BIT,
-    GL_DEPTH_BUFFER_BIT,
-    glClear,
-)
-from OpenGL.GLUT import (
-    GLUT_RGBA,
-    glColor3f,
-    glBegin,
-    glEnd,
-    glVertex2f,
-    glViewport,
-    glOrtho,
-    glutInit,
-    glutInitDisplayMode,
-    glutInitWindowSize,
-    glutInitWindowPosition,
-    glutCreateWindow,
-    glutDisplayFunc,
-    glutIdleFunc,
-    glutMainLoop,
-    glMatrixMode,
-    glLoadIdentity,
-    glutSwapBuffers,
-)
+from OpenGL.GL import *
+from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
 w, h = 500, 500
@@ -69,7 +42,7 @@ def iterate():
     glViewport(0, 0, 500, 500)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0.0, 500, 0.0, 500, 0.0, 1.0)
+    glOrtho(0.0, 500, 0.0, 500, 0.0, 2.0)
     glMatrixMode(GL_MODELVIEW)
     glLoadIdentity()
 
