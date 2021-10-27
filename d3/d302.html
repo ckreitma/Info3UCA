@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <script src='lib/d3.js'></script>
+</head>
+<body>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+
+    <script>
+        var data = [100, 200, 300];
+        var paragraph = d3.select("body").selectAll("p").data(data).text(function (d, i) {
+                    console.log("d: " + d);
+                    console.log("i: " + i);
+                    console.log("this: " + this);
+
+                    return d;
+                });
+                //El retorno es siempre un "selection"
+        //Consulta durante la clase para modificar el segundo elemento.
+        d3.select("body").selectAll("p").filter(function (d, i) { 
+            console.log("d_filter:" + d);
+            return i === 1;
+            }).text("Modificado")
+    </script>
+</body>
+</html>
